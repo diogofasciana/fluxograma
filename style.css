@@ -1,0 +1,40 @@
+/* Estilo para o Header */
+header {
+    background-color: red;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Estilo para o Footer */
+footer {
+    background-color: red;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Estilo para o conteúdo */
+.content {
+    padding: 20px;
+}
+
+/* Estilo para o diagrama */
+.mermaid {
+    margin-top: 20px;
+}

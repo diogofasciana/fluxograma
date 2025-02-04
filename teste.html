@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Exemplo de Mermaid</title>
+    <!-- Incluir o script do Mermaid -->
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+
+    <!-- Conteúdo Principal -->
+    <div class="content">
+        <h1>Exemplo de Diagrama com Mermaid</h1>
+        <!-- Código do Mermaid -->
+        <div class="mermaid">
+          flowchart TD
+          A[Início] --> B[Verificar Emergência]
+          B -->|Emergência OK| C[Verificar Start]
+          C -->|Start Acionado| D[Controlar Esteira]
+          D --> E[Máquina de Estados Esteira]
+          E --> F{Passo 0: Habilitar Motor Esteira}
+          F --> G{Passo 1: Verificar Drive e Iniciar Referenciamento}
+          G --> H{Passo 2: Desligar Referenciamento}
+          H --> I{Passo 3: Habilitar Esteira e Avanço Relativo}
+          I --> J{Passo 4: Certificar Avanço e Sensor Molde}
+          J --> K{Passo 5: Certificar Posição}
+          K --> L{Passo 6: Reiniciar Ciclo}
+          L --> D
+      
+          E --> M[Controlar Molde]
+          M --> N{Passo 0: Mover Molde para Baixo}
+          N --> O{Passo 1: Aguardar Posição Molde Down}
+          O --> P{Passo 2: Aguardar Esteira Em Posição}
+          P --> Q{Passo 3: Mover Molde para Cima}
+          Q --> R{Passo 4: Aguardar Posição Molde Up}
+          R --> S{Passo 5: Aguardar Formagem e Selagem}
+          S --> M
+      
+          E --> T[Controlar Faca]
+          T --> U{Passo 0: Ativar Faca RC}
+          U --> V{Passo 10: Aguardar Esteira Em Posição}
+          V --> W{Passo 15: Ativar Faca RC}
+          W --> X{Passo 20: Aguardar Sensor Faca RC}
+          X --> Y{Passo 30: Ativar Faca AV}
+          Y --> Z{Passo 40: Aguardar Sensor Faca AV}
+          Z --> AA{Passo 50: Verificar Esteira e Reiniciar Ciclo}
+      
+          E --> AB[Controlar Freio Papel]
+          AB --> AC{Esteira Em Posição?}
+          AC -->|Sim| AD[Ativar Freio]
+          AC -->|Não| AE[Desativar Freio]
+      
+          E --> AF[Controlar Motor Rebarba]
+          AF --> AG{Start Acionado?}
+          AG -->|Sim| AH[Ativar Motor Rebarba]
+          AG -->|Não| AI[Desativar Motor Rebarba]      
+        </div>
+    </div>
+
+</body>
+</html>
