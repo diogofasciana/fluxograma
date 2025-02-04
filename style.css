@@ -1,40 +1,50 @@
-/* Estilo para o Header */
+/* Estilos para o cabeçalho */
 header {
-    background-color: red;
-    color: white;
-    padding: 10px 0;
+    background-color: #4CAF50;
+    padding: 20px;
     text-align: center;
+    color: white;
+}
+
+header img {
+    height: 50px;
+    vertical-align: middle;
 }
 
 header a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    font-size: 24px;
+    margin-left: 10px;
 }
 
-/* Estilo para o Footer */
-footer {
-    background-color: red;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-/* Estilo para o conteúdo */
-.content {
+/* Estilos para o folder de links */
+.folder {
+    margin: 20px;
     padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
 }
 
-/* Estilo para o diagrama */
-.mermaid {
-    margin-top: 20px;
+.folder h2 {
+    margin-top: 0;
+}
+
+.folder ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.folder ul li {
+    margin: 10px 0;
+}
+
+.folder ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 18px;
+}
+
+.folder ul li a:hover {
+    text-decoration: underline;
 }
