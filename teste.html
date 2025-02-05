@@ -3,83 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Exemplo de Mermaid</title>
+    <link rel="stylesheet" href="reset.css">  <!-- Link para o CSS de reset -->
+    <link rel="stylesheet" href="style.css">  <!-- Link para o CSS personalizado -->
+    <title>Exemplo de Fluxograma - Mermaid</title>
+    
     <!-- Incluir o script do Mermaid -->
     <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ startOnLoad: true });
+        // Inicializa o Mermaid para que ele possa renderizar os fluxogramas automaticamente
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
     </script>
-
 </head>
 <body>
 
-    <!-- Cabeçalho -->
+    <!-- Cabeçalho da página com logo -->
     <header>
-        <img src="logo.png" alt="Logo">
-        <a href="#">Página Inicial</a>
+        <a href="https://www.sew-eurodrive.com.br/inicio.html"><img src="SEW.svg" alt="Logo"></a>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <div class="content">
-        <h1>Exemplo de Diagrama com Mermaid</h1>
-        <!-- Código do Mermaid -->
-        <div class="mermaid">
-            flowchart TD
-            A[Início] --> B[Verificar Emergência]
-            B -->|Emergência OK| C[Verificar Start]
-            C -->|Start Acionado| D[Controlar Esteira]
-            D --> E[Máquina de Estados Esteira]
-            E --> F{Passo 0: Habilitar Motor Esteira}
-            F --> G{Passo 1: Verificar Drive e Iniciar Referenciamento}
-            G --> H{Passo 2: Desligar Referenciamento}
-            H --> I{Passo 3: Habilitar Esteira e Avanço Relativo}
-            I --> J{Passo 4: Certificar Avanço e Sensor Molde}
-            J --> K{Passo 5: Certificar Posição}
-            K --> L{Passo 6: Reiniciar Ciclo}
-            L --> D
-
-            E --> M[Controlar Molde]
-            M --> N{Passo 0: Mover Molde para Baixo}
-            N --> O{Passo 1: Aguardar Posição Molde Down}
-            O --> P{Passo 2: Aguardar Esteira Em Posição}
-            P --> Q{Passo 3: Mover Molde para Cima}
-            Q --> R{Passo 4: Aguardar Posição Molde Up}
-            R --> S{Passo 5: Aguardar Formagem e Selagem}
-            S --> M
-
-            E --> T[Controlar Faca]
-            T --> U{Passo 0: Ativar Faca RC}
-            U --> V{Passo 10: Aguardar Esteira Em Posição}
-            V --> W{Passo 15: Ativar Faca RC}
-            W --> X{Passo 20: Aguardar Sensor Faca RC}
-            X --> Y{Passo 30: Ativar Faca AV}
-            Y --> Z{Passo 40: Aguardar Sensor Faca AV}
-            Z --> AA{Passo 50: Verificar Esteira e Reiniciar Ciclo}
-
-            E --> AB[Controlar Freio Papel]
-            AB --> AC{Esteira Em Posição?}
-            AC -->|Sim| AD[Ativar Freio]
-            AC -->|Não| AE[Desativar Freio]
-
-            E --> AF[Controlar Motor Rebarba]
-            AF --> AG{Start Acionado?}
-            AG -->|Sim| AH[Ativar Motor Rebarba]
-            AG -->|Não| AI[Desativar Motor Rebarba]
-        </div>
+    <!-- Seção de título com borda -->
+    <div class="divisao">
+        <h1>Fluxograma Metalúgica Rocha - (Nome do Fluxograma)</h1>
     </div>
 
-    <!-- Folder com Links -->
-    <div class="folder">
-        <h2>Links Relacionados</h2>
+    <!-- Exemplo: Se alguém quiser mudar o fluxograma, basta colar o código Mermaid abaixo -->
+    <!-- Código Mermaid: Insira aqui seu código Mermaid para o fluxograma -->
+    <div id="link" class="mermaid">
+        %% Aqui começa o código do Mermaid
+        flowchart TD
+        A[Início] --> B[Verificar Emergência]
+        B -->|Emergência OK| C[Verificar Start]
+        C -->|Start Acionado| D[Controlar Esteira]
+        D --> E[Máquina de Estados Esteira]
+        E --> F{Passo 0: Habilitar Motor Esteira}
+        F --> G{Passo 1: Verificar Drive e Iniciar Referenciamento}
+        G --> H{Passo 2: Desligar Referenciamento}
+        H --> I{Passo 3: Habilitar Esteira e Avanço Relativo}
+        I --> J{Passo 4: Certificar Avanço e Sensor Molde}
+        J --> K{Passo 5: Certificar Posição}
+        K --> L{Passo 6: Reiniciar Ciclo}
+        L --> D
+    
+        E --> M[Controlar Molde]
+        M --> N{Passo 0: Mover Molde para Baixo}
+        N --> O{Passo 1: Aguardar Posição Molde Down}
+        O --> P{Passo 2: Aguardar Esteira Em Posição}
+        P --> Q{Passo 3: Mover Molde para Cima}
+        Q --> R{Passo 4: Aguardar Posição Molde Up}
+        R --> S{Passo 5: Aguardar Formagem e Selagem}
+        S --> M
+    
+        E --> T[Controlar Faca]
+        T --> U{Passo 0: Ativar Faca RC}
+        U --> V{Passo 10: Aguardar Esteira Em Posição}
+        V --> W{Passo 15: Ativar Faca RC}
+        W --> X{Passo 20: Aguardar Sensor Faca RC}
+        X --> Y{Passo 30: Ativar Faca AV}
+        Y --> Z{Passo 40: Aguardar Sensor Faca AV}
+        Z --> AA{Passo 50: Verificar Esteira e Reiniciar Ciclo}
+    
+        E --> AB[Controlar Freio Papel]
+        AB --> AC{Esteira Em Posição?}
+        AC -->|Sim| AD[Ativar Freio]
+        AC -->|Não| AE[Desativar Freio]
+    
+        E --> AF[Controlar Motor Rebarba]
+        AF --> AG{Start Acionado?}
+        AG -->|Sim| AH[Ativar Motor Rebarba]
+        AG -->|Não| AI[Desativar Motor Rebarba]
+
+        %% Fim do código Mermaid
+    </div>
+
+    <!-- Comentário: Se for necessário adicione mais fluxogramas, basta retirar os comentários e colar o código mermaid na área indicada -->
+
+    <!--
+    <div class="divisao">
+        <h1>Fluxograma Metalúgica Rocha - (Nome do Fluxograma - Parte 2)</h1>
+    </div>
+    
+    <div class="mermaid">
+    
+        %% Aqui começa o código do Mermaid
+
+        %% Fim do código Mermaid
+        
+    </div>
+    -->
+    
+    <!-- Seção com links para apoio e contato -->
+    <footer>
         <ul>
-            <li><a href="https://www.exemplo.com/fluxograma">Fluxograma Completo</a></li>
-            <li><a href="https://www.exemplo.com/documentacao">Documentação</a></li>
-            <li><a href="https://www.exemplo.com/suporte">Suporte</a></li>
-            <li><a href="https://www.exemplo.com/contato">Contato</a></li>
+            <!-- Link para o fluxograma. Pode ser utilizado para navegação interna. -->
+            <li><a href="#link">Fluxograma</a></li>
+            <!-- Informações de contato -->
+            <li>Suporte SEW - automacao@sew.com.br;</li>
+            <li>(011) 2489 9126;</li>
+            <!-- Créditos de autoria -->
+            <li>Feito por: Diogo Fasciana Alves - RE 4925 - Engenharia de Automação;</li>
         </ul>
-    </div>
+    </footer>
 
 </body>
 </html>
