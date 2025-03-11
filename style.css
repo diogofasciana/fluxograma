@@ -1,60 +1,37 @@
-/* Estilos para o cabeçalho */
-body{
+body {
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
 header {
     background-color: #ffff;
-    padding: 20px;
     text-align: center;
 }
 
 header img {
-    height: 50px;
     vertical-align: middle;
+    width: 100px;
 }
 
 h1 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin: 20px 0;
-    padding: 20px 0;
 }
 
-.mermaid{
+.mermaid {
     margin: 20px 0;
 }
 
 .divisao {
     border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
-    width: 100%; /* Garante que a div ocupe toda a largura da tela */
-    left: 0; /* Garante que a div comece no início da tela */
-    top: 100px; /* Pode ajustar a altura da borda (valor de acordo com seu layout) */
+    border-bottom: 2px solid #ccc; 
+    left: 0; 
 }
 
-
-header a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    margin-left: 10px;
-}
-
-/* Estilos para o footer de links */
 footer {
     text-align: left;
-    margin: 20px;
-    padding: 20px;
     background-color: rgb(248, 242, 242);
-    border-radius: 8px;
-    width: 95%;
-}
-
-footer h2 {
-    margin-top: 0;
 }
 
 footer ul {
